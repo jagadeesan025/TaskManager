@@ -1,0 +1,29 @@
+
+ <table >
+  <tr style="background-color: rgb(8, 13, 67);">
+
+    <th>ClientId</th>
+     <th>Client Name</th>
+    <th>Address</th>
+    <th>Phone</th>
+    <th>GST</th>
+    <th>Contact Person</th>
+   <th>Website</th>
+   <th>Phone Number</th>
+   <th>Email</th>
+   <th>CreatedBy</th>
+  </tr>
+   <tr *ngFor="let x of list" >
+    <td>{{x.clientId}}</td>
+    <td>{{x.clientName}}</td>
+   <td>{{x.address}}</td>
+   <td>{{x.phone}}</td>
+   <td>{{x.gst}}</td>
+   <td>{{x.contactPerson}}</td>
+   <td>{{x.website}}</td>
+   <td>{{x.phoneNumber}}</td>
+   <td>{{x.email}}</td>
+   <td>{{x.createdBy}}</td>
+  </tr>
+ </table>
+

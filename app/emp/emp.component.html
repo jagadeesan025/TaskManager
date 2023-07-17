@@ -1,0 +1,71 @@
+<div class="row"> <div class="col-2"><app-home></app-home></div>
+<div class="col-10" style="padding-top: 20px;">
+
+    <div class="card-body bd">
+
+
+     <form class="row" name="form" [formGroup]="f">
+
+        <div class="row " style="padding-bottom: 50px;">
+
+
+          <div class="form-group col-4">
+            <div ><span   class="input-group-text text-danger "><i class="fa fa-user-circle-o"></i>
+            <input  type="text" formControlName="employeeName" class="form-control me" placeholder="first Name"
+              [ngClass]="{ 'is-invalid': submitted && f.controls['employeeName'].invalid }" required>
+            <div *ngIf="submitted && f.controls['employeeName'].invalid" class="invalid-feedback">
+              <div *ngIf="f.controls['employeeName'].errors required">Employee name </div></div></span>
+            </div>
+          </div>
+
+
+          <div class="form-group col-4">
+            <div   class="input-group-prepend"><span   class="input-group-text text-danger"><i   class="fa fa-mobile" style="font-size:30px"></i>
+            <input type="text" formControlName="mobile" class="form-control me" placeholder="mobile no"
+              [ngClass]="{'is-invalid': submitted && f.controls['mobile'].invalid}" required>
+            <div *ngIf="submitted&&f.controls['mobile'].invalid" class="invalid-feedback">
+              <div *ngIf="f.controls['mobile'].errors required">Mobile no</div></div></span>
+            </div>
+          </div>
+
+
+          <div class="col-4">
+            <div   class="input-group-prepend"><span   class="input-group-text text-danger"><i   class="fa fa-user-circle"></i>
+            <input type="text" formControlName="username" class="form-control me" placeholder="user name"
+              [ngClass]="{ 'is-invalid': submitted && f.controls['username'].invalid }" required>
+            <div *ngIf="submitted && f.controls['username'].invalid" class="invalid-feedback">
+              <div *ngIf="f.controls['username'].errors required">user name</div></div></span>
+            </div>
+          </div></div>
+          <div class="row "style="padding-bottom: 40px;">
+          <div class="col me">
+            <div   class="input-group-prepend"><span   class="input-group-text text-danger"><i   class=" fa fa-unlock-alt" ></i>
+            <input type="password" class="form-control  me" formControlName="password" placeholder="password"
+              [ngClass]="{'is-invalid': submitted &&f.controls['password'].invalid }" required>
+            <div *ngIf="submitted && f.controls['password'].invalid" class="invalid-feedback">
+              <div *ngIf="f.controls['password'].errors required">password</div></div></span>
+            </div></div>
+
+         <div class="col me">
+
+          <div   class="input-group-prepend"><span   class="input-group-text text-danger"><i   class="fa fa-unlock-alt"></i>
+            <input type="password" class="form-control  me" formControlName="confirmPassword" placeholder="confirmPassword"
+              [ngClass]="{'is-invalid': submitted &&f.controls['password'].invalid }" required></span>
+            <div *ngIf="submitted && f.controls['password'].invalid" class="invalid-feedback">
+              <div *ngIf="f.controls['password'].errors required"> password is mismatch</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <button class="m2" style=" box-shadow: 3px black;" type="submit" (click)="submit2()">register</button>
+
+          <button class="as" type="reset" routerLink="/emp">cancal</button>
+        </div>
+      </form>
+    </div>
+
+
+    </div></div>
+
+

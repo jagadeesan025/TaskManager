@@ -1,0 +1,73 @@
+<div class="row"><div class="col-2"><app-home></app-home></div>
+<div class="col-10">
+<div class="container" style="padding-top: 30px;">
+
+<div class="main-content">
+  <div class="card container-fluid" style="background-color: bisque; border-radius: 30px;">
+    <div class="card-header">
+      <h1 style="text-align: center; font-style: oblique;">TASK DETAILS</h1>
+    </div>
+    <div class="card-body">
+      <form [formGroup]="TaskForm">
+        <div class="row">
+<div></div>
+          <div class="col-5">
+          <div class="form-group">
+            <label style="padding-left: 10px;padding-top: 30px;padding-bottom: 5px;">Client Name</label>
+            <ng-select [items]="ClientDtls" bindLabel="clientName" bindValue="clientId" formControlName="Client"></ng-select>
+            <div *ngIf="submitted&&TaskForm.controls['Client'].invalid" class="invalid-feedback">
+              <div *ngIf="TaskForm.controls['Client'].errors required">Client Name</div></div>
+          </div></div>
+
+          <div class="col-5   ">
+            <div class="form-group">
+              <label style="padding-left: 10px;padding-top: 30px;padding-bottom: 5px;">Category</label>
+              <ng-select [items]="ClientDtls" bindLabel="clientName" bindValue="clientId" formControlName="Client"></ng-select>
+            </div></div>
+
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <label style="padding-left: 10px;padding-top: 30px;padding-bottom: 5px;">Description</label>
+           <input type="text" formControlName="description" class="form-control me s" placeholder="description"
+              [ngClass]="{'is-invalid': submitted && TaskForm.controls['description'].invalid}" required>
+            <div *ngIf="submitted&&TaskForm.controls['description'].invalid" class="invalid-feedback">
+              <div *ngIf="TaskForm.controls['description'].errors required">description</div></div>
+            </div>
+        <div class="col-4">
+          <div class="form-group">
+            <label style="padding-left: 10px;padding-top: 30px;padding-bottom: 5px;">Assigned To *</label>
+            <ng-select [items]="ClientDtls" bindLabel="clientName" bindValue="clientId" formControlName="Client"></ng-select>
+          </div></div></div>
+
+   <div class="row">
+    <div class="col-3">
+      <label  style="padding-left: 10px;padding-top: 30px;padding-bottom: 5px;">Scheduled Date</label>
+      <input type="date" formControlName="sd" class="form-control"
+
+    [ngClass]="{'is-valid':submitted && TaskForm.controls['sd'].invalid}"required>
+    <div *ngIf="submitted&&TaskForm.controls['sd'].invalid" class="invalid-feedback">
+      <div *ngIf="TaskForm.controls['sd'].errors required">date is required</div></div>
+    </div>
+
+    <div class="col-3">
+        <label  style="padding-left: 10px;padding-top: 30px; padding-bottom: 5px;">Due Date</label>
+      <input type="date" formControlName="sd" class="form-control"
+
+    [ngClass]="{'is-valid':submitted && TaskForm.controls['sd'].invalid}"required>
+    <div *ngIf="submitted&&TaskForm.controls['sd'].invalid" class="invalid-feedback">
+      <div *ngIf="TaskForm.controls['sd'].errors required">date is required
+      </div></div></div>
+
+   </div>
+   <div class="col-12">
+    <button class="m2" style=" box-shadow: 3px black;" type="submit" (click)="submit()">register</button>
+
+    <button class="as" type="reset" routerLink="/task">cancal</button>
+  </div>
+      </form>
+    </div>
+  </div>
+</div>
+</div></div>
+</div>

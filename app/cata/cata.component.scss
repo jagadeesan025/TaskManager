@@ -1,0 +1,112 @@
+.mn{
+  color: rgb(46, 39, 39);
+  font-size: 50px;
+
+}
+.bd{
+  margin: 10px;
+  border-color: black;
+  padding: 20px,10px,10px,10px;
+}
+.me
+{
+
+  border-color: gray;
+  border-radius: 3px ;
+  box-shadow: white;
+  margin: 5px 5px 5px 5px;
+
+}
+.fg{
+  background-color: aqua;
+}
+.bu
+{padding:10px
+   ;
+
+}
+.bo{
+  text-align: center;
+ margin: 1%;
+}
+.card
+{
+  border-color: black;
+}
+.dd
+{
+  background: rgba( 255, 255, 255, 0.35 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 8.5px );
+-webkit-backdrop-filter: blur( 8.5px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.m2
+{
+
+
+  margin-right: 40px;
+
+
+  margin-left: 10px;
+  padding: 5px 20px 5px 20px;
+  background-color: rgb(21, 255, 87);
+  color: rgb(255, 255, 255);
+  border-radius: 10px;
+  border: 3px rgb(255, 0, 0);
+  float: right;
+}
+.m2:hover{
+  background-color: rgb(255, 255, 255);
+  float: right;
+  color: rgb(4, 255, 0);
+}
+
+.as
+{
+  margin-left: 10px;
+  padding: 5px 20px 5px 20px;
+  background-color: rgb(255, 0, 0);
+  color: rgb(0, 0, 0);
+  border-radius: 10px;
+  border: 3px rgb(255, 0, 0);
+  float: right;
+}
+.as:hover{
+  background-color: rgb(255, 255, 255);
+  float: right;
+  color: rgb(255, 0, 0);
+}
+.s{
+  padding: 30px;
+}
+.l{
+  margin-top: 5px;
+ padding:12px 43px 12px 43px;
+  text-align: center;
+   border: 1px solid gray;
+}
+
+.r{
+  margin-top: 5px;
+ padding:30px 43px 39px 43px;
+  text-align: center;
+   border: 1px solid gray;
+}
+
+@media (max-Width:1104px) {
+
+}
+@media (max-width:720px)
+{
+
+}
+@media (max-width:500px)
+{
+
+  .card-body{
+    height: 851px;
+    width: 100px;
+  }
+}

@@ -1,0 +1,24 @@
+<div class="container-fluid">
+  <br>
+  <button routerLink="/cat">Add new catagory</button>
+<br> <br>
+
+<button routerLink="/home">cancal</button>
+</div>
+
+<br><br>
+ <table >
+  <tr style="background-color: aquamarine;">
+
+    <th>CategoryId</th>
+     <th>Category</th>
+    <th>Description</th>
+    <th>CreatedBy</th>
+  </tr>
+   <tr *ngFor="let x of list" >
+    <td>{{x.categoryId}}</td>
+    <td>{{x.category}}</td>
+   <td>{{x.description}}</td>
+   <td>{{x.createdBy}}</td>
+  </tr>
+ </table>

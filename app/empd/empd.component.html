@@ -1,0 +1,29 @@
+
+<br><br><button routerLink="/home">cancal</button>
+<button routerLink="/emp">Add new catagory</button>
+
+<br><br>
+<table >
+
+  <tr style="background-color: aquamarine; padding-left: 200px;">
+
+    <th>employeeId</th>
+     <th>employeeName</th>
+    <th>mobile</th>
+    <th>userName</th>
+    <th>password</th>
+    <th>confirmPassword</th>
+   <th>createdBy</th>
+     </tr>
+   <tr *ngFor="let x of list" >
+    <td>{{x.employeeId}}</td>
+    <td>{{x.employeeName}}</td>
+   <td>{{x.mobile}}</td>
+   <td>{{x.userName}}</td>
+   <td>{{x.password}}</td>
+   <td>{{x.confirmPassword}}</td>
+   <td>{{x.createdBy}}</td>
+  </tr>
+ </table>
+
+

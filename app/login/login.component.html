@@ -1,0 +1,30 @@
+<body style="margin: -8px;">
+	<div class="main">
+		<input type="checkbox" id="chk" aria-hidden="true">
+		<div class="login" style="padding-top: 70px;margin-top: 50px;">
+			<form name="form" (ngSubmit)="f.form.valid && onSubmit(f)" #f="ngForm" novalidate>
+
+				<label for="chk" aria-hidden="true">Login</label>
+        <br>
+      <p style="text-align: center;">user name: Jaga; password:Jaga1234</p>
+
+        <br>
+				<input type="text" name="User" class="form-control" [(ngModel)]="model.User" #user="ngModel" placeholder="user name"
+					[ngClass]="{ 'is-invalid': f.submitted && user.invalid }" required user pattern="Jaga">
+				<div *ngIf="f.submitted && user.invalid" class="invalid-feedback">
+					<div style="text-align: center;margin-top: -20px;" *ngIf="user.errors">username is required</div>
+				</div>
+
+
+				<input type="password" name="password" class="form-control" [(ngModel)]="model.password"
+				#password="ngModel" [ngClass]="{ 'is-invalid': f.submitted && password.invalid }" required pattern="Jaga1234" >
+			<div *ngIf="f.submitted && password.invalid" class="invalid-feedback" >
+				<div style="text-align: center;margin-top: -20px;" *ngIf="password.errors">Password is required</div>
+
+			</div>
+				<button class="btn btn-primary mr-1">Login</button>
+				<button type="button" class="btn btn-outline-primary">forgot Password</button>
+			</form>
+		</div>
+	</div>
+  </body>
